@@ -1,0 +1,17 @@
+# Default editing configuration
+#
+tabSize = 4
+softTabs = true
+softWrap = true  
+
+# Defaults for c
+#
+[ source.c ]
+softTabs = true
+tabSize = 4
+
+# Defaults for python
+#
+[ source.python ]
+softTabs = true
+tabSize = 4
