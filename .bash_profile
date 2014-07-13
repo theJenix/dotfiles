@@ -18,3 +18,8 @@ function openDash() {
 }
 
 alias dash=openDash
+
+function doLaunch() {
+    JAVA_HOME="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/" CLASSPATH="." ~/projects/c6m/resources/scripts/launch "$@"
+}
+alias launch=doLaunch

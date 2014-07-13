@@ -24,7 +24,11 @@ autocmd FileType python set textwidth=120
 " lisp: lisp mode, auto indent
 autocmd FileType lisp set lisp autoindent
 " clojure: map return to :Eval (from fireplace.vim)
-autocmd FileType clojure nmap <CR> :Eval<CR>
+autocmd FileType clojure call ClojureOptions() 
+function ClojureOptions()
+    nmap <Leader><Enter> :%Eval<CR>
+    nmap <Enter> :Eval<CR>
+endfunction
 
 "NOTE: commented out hidden just to see if i'll miss it
 " set hidden " Allow hidden unsaved buffers
