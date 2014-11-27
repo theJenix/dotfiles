@@ -22,3 +22,9 @@
 [submodule ".vim/bundle/vim-clojure-highlight"]
 	path = .vim/bundle/vim-clojure-highlight
 	url = git://github.com/guns/vim-clojure-highlight.git
+[submodule ".vim/bundle/vim-arduino-ino"]
+	path = .vim/bundle/vim-arduino-ino
+	url = git@github.com:jplaut/vim-arduino-ino.git
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = git@github.com:tpope/vim-surround.git
