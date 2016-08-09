@@ -1,7 +1,8 @@
-*
+/*
 !install.sh
 !.*
 
 !.vim/bundle/*
+!.vim/colors
 
 .DS_Store
