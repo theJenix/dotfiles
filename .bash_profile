@@ -9,7 +9,10 @@ export -p UNISONLOCALHOSTNAME=Jesses-MacBook-Air.local
 
 export -p ANDROID_HOME=/usr/local/opt/android-sdk
 
-export -p PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+#export -p PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+export -p CPATH=/usr/local/include:$CPATH
+export -p LIBRARY_PATH=/usr/local/lib:$LIBRARY_PATH
 
 source ~/Development/src/switch-src/_completion.sh
 
@@ -23,3 +26,12 @@ function doLaunch() {
     JAVA_HOME="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/" CLASSPATH="." ~/projects/c6m/resources/scripts/launch "$@"
 }
 alias launch=doLaunch
+
+complete -C aws_completer aws
+
+alias vi=mvim
+
+if [ -e .bash_private ];
+then
+    source .bash_private
+fi

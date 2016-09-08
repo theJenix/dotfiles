@@ -30,6 +30,15 @@ function ClojureOptions()
     nmap <Enter> :Eval<CR>
 endfunction
 
+autocmd FileType cpp call CppOptions()
+autocmd FileType ino call CppOptions()
+autocmd FileType pde call CppOptions()
+function CppOptions()
+  set tabstop=2
+  set softtabstop=2
+  set shiftwidth=2
+endfunction
+
 "NOTE: commented out hidden just to see if i'll miss it
 " set hidden " Allow hidden unsaved buffers
 set laststatus=2 " Always show status line
@@ -76,6 +85,7 @@ nmap <Leader>k :bn<CR>
 nmap <Leader>j :bp<CR>
 nmap <Leader>o :b#<CR>
 nmap <Leader>t :tabnew<Space>
+nmap <Leader>m :make<CR>
 
 " FuzzyFinder 
 nmap <Leader>f :FufFile<CR>
@@ -87,4 +97,7 @@ nmap <Leader>b :FufBuffer<CR>
 "au Syntax * RainbowParenthesesLoadRound
 "au Syntax * RainbowParenthesesLoadSquare
 "au Syntax * RainbowParenthesesLoadBraces
+
+"let g:vim_arduino_auto_open_serial = 1
+
 
