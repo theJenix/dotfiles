@@ -93,10 +93,10 @@ nmap <Leader>l :FufLine<CR>
 nmap <Leader>b :FufBuffer<CR>
 
 " Rainbow parens
-"au VimEnter * RainbowParenthesesToggle
-"au Syntax * RainbowParenthesesLoadRound
-"au Syntax * RainbowParenthesesLoadSquare
-"au Syntax * RainbowParenthesesLoadBraces
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 "let g:vim_arduino_auto_open_serial = 1
 

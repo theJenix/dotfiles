@@ -31,7 +31,9 @@ complete -C aws_completer aws
 
 alias vi=mvim
 
-if [ -e .bash_private ];
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+if [ -e ~/.bash_private ];
 then
-    source .bash_private
+    source ~/.bash_private
 fi
