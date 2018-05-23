@@ -73,7 +73,7 @@ hi ColorColumn ctermbg=darkgray
 
 set backspace=eol,start,indent " Backspace config
 
-let mapleader = ";"
+let g:mapleader = ";"
 
 " Leader maps
 nmap <Leader>w :w<CR>
@@ -92,12 +92,52 @@ nmap <Leader>f :FufFile<CR>
 nmap <Leader>l :FufLine<CR>
 nmap <Leader>b :FufBuffer<CR>
 
+" Line and character selection, using home row keys.  Conflicts mapped out of the way using the leader key
+nmap <Leader>J :join<CR>
+"nmap <Leader>K :
+nnoremap <Leader>H H
+nnoremap <Leader>L L
+
+nmap J V
+vmap J j
+
+nmap K V
+vmap K k
+
+nmap L vl
+vmap L l
+
+nmap H vh
+vmap H h
+
+
 " Rainbow parens
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+
+"    \ ['black',       'SeaGreen3'],
+au BufRead,BufNewFile *.hl setfiletype clojure
+au BufRead,BufNewFile *.boot setfiletype clojure
 "let g:vim_arduino_auto_open_serial = 1
 
 
