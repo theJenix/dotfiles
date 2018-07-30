@@ -1,0 +1,8 @@
+
+
+Q: tmux get stuck when editting with vim
+A: You are probably pressing C-s which is flow control, press C-q when it happens or do "stty -ixon" before running vim.
+Src: https://github.com/tmux/tmux/issues/7
+
+--
+

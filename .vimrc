@@ -73,7 +73,7 @@ hi ColorColumn ctermbg=darkgray
 
 set backspace=eol,start,indent " Backspace config
 
-let mapleader = ";"
+let g:mapleader = ";"
 
 " Leader maps
 nmap <Leader>w :w<CR>
@@ -91,6 +91,25 @@ nmap <Leader>m :make<CR>
 nmap <Leader>f :FufFile<CR>
 nmap <Leader>l :FufLine<CR>
 nmap <Leader>b :FufBuffer<CR>
+
+" Line and character selection, using home row keys.  Conflicts mapped out of the way using the leader key
+nmap <Leader>J :join<CR>
+"nmap <Leader>K :
+nnoremap <Leader>H H
+nnoremap <Leader>L L
+
+nmap J V
+vmap J j
+
+nmap K V
+vmap K k
+
+nmap L vl
+vmap L l
+
+nmap H vh
+vmap H h
+
 
 " Rainbow parens
 au VimEnter * RainbowParenthesesToggle
@@ -117,6 +136,8 @@ let g:rbpt_colorpairs = [
     \ ]
 
     "\ ['black',       'SeaGreen3'],
+au BufRead,BufNewFile *.hl setfiletype clojure
+au BufRead,BufNewFile *.boot setfiletype clojure
 "let g:vim_arduino_auto_open_serial = 1
 
 
