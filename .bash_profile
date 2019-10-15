@@ -37,3 +37,8 @@ if [ -e ~/.bash_private ];
 then
     source ~/.bash_private
 fi
+export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+export PATH="~/.local/bin:$PATH"
+

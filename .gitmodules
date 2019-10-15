@@ -34,3 +34,21 @@
 [submodule ".vim/bundle/paredit.vim"]
 	path = .vim/bundle/paredit.vim
 	url = git@github.com:vim-scripts/paredit.vim.git
+[submodule ".vim/bundle/vim-jsx"]
+	path = .vim/bundle/vim-jsx
+	url = git@github.com:mxw/vim-jsx.git
+[submodule ".vim/bundle/yajs.vim"]
+	path = .vim/bundle/yajs.vim
+	url = git@github.com:othree/yajs.vim.git
+[submodule ".vim/bundle/vaxe"]
+	path = .vim/bundle/vaxe
+	url = git@github.com:jdonaldson/vaxe.git
+[submodule ".vim/bundle/vim-gutentags"]
+	path = .vim/bundle/vim-gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule ".vim/bundle/vim-slamhound"]
+	path = .vim/bundle/vim-slamhound
+	url = git@github.com:guns/vim-slamhound.git

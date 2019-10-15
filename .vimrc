@@ -1,6 +1,9 @@
 set nocompatible
 set visualbell
 
+let g:pathogen_disabled = []
+call add(g:pathogen_disabled, 'vim-airline')
+
 execute pathogen#infect()
 
 set t_Co=256
@@ -13,9 +16,9 @@ filetype plugin indent on
 
 " default: spaces, 4 spaces per tab, 4 spaces per shift
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 
 " autocmds
 
@@ -24,7 +27,7 @@ autocmd FileType python set textwidth=120
 " lisp: lisp mode, auto indent
 autocmd FileType lisp set lisp autoindent
 " clojure: map return to :Eval (from fireplace.vim)
-autocmd FileType clojure call ClojureOptions() 
+autocmd FileType clojure call ClojureOptions()
 function ClojureOptions()
     nmap <Leader><Enter> :%Eval<CR>
     nmap <Enter> :Eval<CR>
@@ -87,11 +90,16 @@ nmap <Leader>o :b#<CR>
 nmap <Leader>t :tabnew<Space>
 nmap <Leader>m :make<CR>
 
-" FuzzyFinder 
-nmap <Leader>f :FufFile<CR>
+" FuzzyFinder
+nmap <Leader>f :FZF<CR>
 nmap <Leader>l :FufLine<CR>
 nmap <Leader>b :FufBuffer<CR>
 
+" Tags/goto defn
+" nmap <Leader>g <C-]><CR>
+" nmap <Leader>G :pop<CR>
+" close the preview window
+" nmap <Leader>x :pc<CR>
 " Line and character selection, using home row keys.  Conflicts mapped out of the way using the leader key
 nmap <Leader>J :join<CR>
 "nmap <Leader>K :
@@ -140,4 +148,17 @@ au BufRead,BufNewFile *.hl setfiletype clojure
 au BufRead,BufNewFile *.boot setfiletype clojure
 "let g:vim_arduino_auto_open_serial = 1
 
+autocmd BufWritePre * :%s/\s\+$//e
 
+let g:jsx_ext_required = 1
+
+autocmd FileType javascript set formatprg=prettier\ --parser\ babel\ --stdin
+"autocmd BufWritePre *.js :normal gggqG
+
+set undodir=~/.local/share/vim/undodir
+set undofile
+
+set rtp+=/usr/local/opt/fzf
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+set statusline+=%{gutentags#statusline()}
