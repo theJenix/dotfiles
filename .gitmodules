@@ -45,10 +45,17 @@
 	url = git@github.com:jdonaldson/vaxe.git
 [submodule ".vim/bundle/vim-gutentags"]
 	path = .vim/bundle/vim-gutentags
-	url = https://github.com/ludovicchabant/vim-gutentags.git
+	url = git@github.com:ludovicchabant/vim-gutentags.git
 [submodule ".vim/bundle/vim-airline"]
 	path = .vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline
+	url = git@github.com:vim-airline/vim-airline.git
 [submodule ".vim/bundle/vim-slamhound"]
 	path = .vim/bundle/vim-slamhound
 	url = git@github.com:guns/vim-slamhound.git
+[submodule ".vim/bundle/typescript-vim"]
+	path = .vim/bundle/typescript-vim
+	url = git@github.com:leafgarland/typescript-vim.git
+[submodule ".vim/bundle/coc.nvim"]
+	path = .vim/bundle/coc.nvim
+	url = git@github.com:neoclide/coc.nvim.git
+	branch = release
