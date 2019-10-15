@@ -143,7 +143,7 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 
-"    \ ['black',       'SeaGreen3'],
+    "\ ['black',       'SeaGreen3'],
 au BufRead,BufNewFile *.hl setfiletype clojure
 au BufRead,BufNewFile *.boot setfiletype clojure
 "let g:vim_arduino_auto_open_serial = 1
